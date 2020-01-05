@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.960
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestResourceClient", "TestResourceClient\TestResourceClient.csproj", "{9DEE2BBD-BC64-4D8C-998B-3B1ECCF2CE87}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "[TestServer]", "[TestServer]", "{4FA90DAE-7784-44AC-91B3-31970754EE5A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "testresource", "testresource", "{321F7116-26BB-4F43-8254-E78C146604D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9DEE2BBD-BC64-4D8C-998B-3B1ECCF2CE87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DEE2BBD-BC64-4D8C-998B-3B1ECCF2CE87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DEE2BBD-BC64-4D8C-998B-3B1ECCF2CE87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DEE2BBD-BC64-4D8C-998B-3B1ECCF2CE87}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9DEE2BBD-BC64-4D8C-998B-3B1ECCF2CE87} = {321F7116-26BB-4F43-8254-E78C146604D5}
+		{321F7116-26BB-4F43-8254-E78C146604D5} = {4FA90DAE-7784-44AC-91B3-31970754EE5A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD749595-AFCD-4793-B458-46811CD33ED1}
+	EndGlobalSection
+EndGlobal
