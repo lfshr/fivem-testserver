@@ -51,7 +51,7 @@ function Add-ResourceRelativePathToProjects
     )
 
     $Solution.ProjectsInOrder | Where-Object ProjectType -ne 'SolutionFolder' | ForEach-Object {
-        $relPath = 'bin'
+        $relPath = ''
         $parentGuid = $_.ParentProjectGuid
         $parent = $Solution.ProjectsByGuid[$parentGuid]
         $ensures.Add("ensure $($parent.ProjectName.ToLower())")
@@ -67,6 +67,7 @@ function Add-ResourceRelativePathToProjects
         $_ | Add-Member -MemberType NoteProperty -Name ResourceRelPath -Value $relPath -Force
     }
 }
+#endregion
 
 #region download fxserver and config
 $fxRoot = New-Item -Path "$PSScriptRoot\FXServer" -ItemType Directory -Force
@@ -119,5 +120,6 @@ $solution.ProjectsInOrder |
 $configValue = Get-Content -Path "$PSScriptRoot\server.cfg.template" -Raw
 $configValue = $configValue.Replace('${custom_resources}', [string]::Join("`n", $ensures))
 New-Item -Path "$fxRoot\server-data\server.cfg" -Value $configValue
+#endregion
 
-Write-Information "`n`nFinished building Development server. Please set the sv_licencekey and add the projects before running! - I'll get to having that automated next."
+Write-Information "`n`nFinished building Development server. Please set the sv_licencekey before running! - I'll get to having that automated(ish) next."
