@@ -8,6 +8,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "resources", "resources", "{295FB209-67AF-4B2B-816A-D075F1E0787E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Server\Server.csproj", "{DAAC5215-074A-4E2E-A6AD-3D62CEE2AB0D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9DEE2BBD-BC64-4D8C-998B-3B1ECCF2CE87} = {9DEE2BBD-BC64-4D8C-998B-3B1ECCF2CE87}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

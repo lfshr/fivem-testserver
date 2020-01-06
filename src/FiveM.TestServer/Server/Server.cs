@@ -30,6 +30,10 @@ namespace Server
             {
                 var tempPath = Path.Join(Path.GetTempPath(), Guid.NewGuid().ToString());
                 Directory.CreateDirectory(tempPath);
+
+                if (!Directory.Exists(@"server-data\resources"))
+                    Directory.CreateDirectory(@"server-data\resources");
+
                 try
                 {
                     DoAction("Downloading Server Data", () => DownloadAndExtractTo(fxServerDataDownloadUri, tempPath));
@@ -37,7 +41,6 @@ namespace Server
                     var children = Directory.GetDirectories(Path.Join(tempPath, @"cfx-server-data-master\resources"));
                     foreach (var child in children)
                     {
-                        Console.WriteLine(Directory.GetCurrentDirectory());
                         var dirName = new DirectoryInfo(child).Name;
                         Directory.Move(child, $@"server-data\resources\{dirName}");
                     }
