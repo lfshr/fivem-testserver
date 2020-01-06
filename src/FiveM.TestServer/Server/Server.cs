@@ -21,7 +21,6 @@ namespace Server
         {
             var fxServerDownloadUri = ConfigurationManager.AppSettings["fxServerDownloadUri"];
             var fxServerDataDownloadUri = ConfigurationManager.AppSettings["fxServerDataDownloadUri"];
-            var fxServerRunCmd = ConfigurationManager.AppSettings["fxServerRunCmd"];
 
             if (!Directory.Exists("server"))
                 DoAction("Downloading FXServer", () => DownloadAndExtractTo(fxServerDownloadUri, "server"));
